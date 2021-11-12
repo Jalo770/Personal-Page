@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CYJL Personal Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pageStyles.css">
+  </head>
+  <body>
+
+    <div id="sideNavigation" class="sideNav">
+      <div class="sideNavButtonContainer">
+        <button class="sideNavButtons" onclick="buttonHomeEvent()">HOME</button>
+        <button class="sideNavButtons" onclick="buttonAboutMeEvent()">ABOUT</button>
+        <button class="sideNavButtons" onclick="buttonProjectsEvent()">PROJECTS</button>
+      </div>
+    </div>
+
+    <div class="contentBackground">
+      <div id="home" class="section">
+        <div class="mainPageContentHolder">
+          <div class="mainPageTitle">
+            <h6 class="mainPageSubHeading">WELCOME TO MY <span class="highlight">PORTFOLIO</span></h6>
+            <h1 class="mainPageHeading">I'm <span class="highlight">Jason</span> Lo</h1>
+            <h6 class="mainPageSubHeading"><span class="highlight">Mobile Apps Developer</span></h6>
+          </div>
+          <img class="mainPagePic" src="CYJL.jpg" alt="Jason Lo">
+        </div>
+      </div>
+
+      <div id="aboutMe" class="section">
+        <div class="sectionTitle">
+          <h1 class="pageTitle">ABOUT ME</h1>
+        </div>
+        <div class="sectionContent">
+          <p class="sectionContentParagraph">
+            I am a current student of University of Technology Sydney (UTS) studying Information Technology majoring in Enterprise System Developement.
+            I have worked at Sandstone Technology as a Mobile Apps Developer creating mobile banking solutions.
+            During my time at Sandstone, I have worked in various projects mostly using React Native Framework.
+            So I have experiences programming in Typescript as well as Kotlin(Android) and Swift (iOS).
+          </p>
+          <div class="aboutMeLink">
+            <a class="downloadResume" href="Chi Yiu Jason Lo CV.pdf" download><u>Download Resume</u></a>
+            <a class="linkedinProfile" href="https://www.linkedin.com/in/cyjasonlo/">linkedin</a>
+            <a class="githubPage" href="https://github.com/Jalo770/">Github</a>
+          </div>
+          <img src="Sandstone Technology.jpg" alt="Sandstone Technology" class="sectionContentPicture">
+        </div>
+      </div>
+
+      <div id="projects" class="section">
+        <div class="sectionTitle">
+          <h1 class="pageTitle">PROJECTS</h1>
+        </div>
+        <div class="sectionContent">
+          <p class="sectionContentParagraph">
+            Mobile Application to take orders and store order data in Google Firebase.
+            Users are then able to store data of orders and bookings, which is accessible with another device.
+          </p>
+          <div class="projectlink">
+            <a class="githubProjectPage" href="https://github.com/Jalo770/RestaurantApp" download>Github Project</a>
+          </div>
+          <img src="1200px-Android_robot.svg.png" alt="Android" class="sectionContentPicture">
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        var home = document.getElementById("home");
+        var aboutMe = document.getElementById("aboutMe");
+        var projects = document.getElementById("projects");
+        home.style.display = "block";
+
+        function buttonHomeEvent () {
+          home.style.display = "block";
+          aboutMe.style.display = "none";
+          projects.style.display = "none";
+        }
+
+        function buttonAboutMeEvent () {
+          home.style.display = "none";
+          aboutMe.style.display = "block";
+          projects.style.display = "none";
+        }
+
+        function buttonProjectsEvent () {
+          home.style.display = "none";
+          aboutMe.style.display = "none";
+          projects.style.display = "block";
+        }
+
+      </script>
+    </div>
+
+  </body>
+</html>
